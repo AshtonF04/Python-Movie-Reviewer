@@ -4,14 +4,14 @@ class Movie:
     def add_review(title, release_year, genre, rating):
         movie = Movie(title, release_year, genre, rating)
         Movie.reviews.append(movie)
-
-        str_len = len(str(movie))
-        print("-" * (str_len + 40))
-        print(f"{movie} was successfully added to the database.")
-        print("-" * (str_len + 40))
+        
+        return movie
 
     def list_reviews():
-        pass
+        for movie in Movie.reviews:
+            print("-" * len(str(movie)))
+            print(movie)
+            print("-" * len(str(movie)))
 
 
     def __init__(self, title, release_year, genre, rating):
