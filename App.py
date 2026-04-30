@@ -1,4 +1,7 @@
+import json
+
 from Movie import Movie
+from SaveUtil import SaveUtil
 
 def add_review():
     try:
@@ -30,6 +33,17 @@ def list_reviews():
 
     Movie.list_reviews()
 
+def save_reviews():
+    print("---------")
+    print("Saving...")
+    print("---------")
+
+    reviews = SaveUtil.toDict(Movie.reviews)
+    with open("save.json", "w") as f:
+        json.dump(reviews, f, indent=4)
+
+
+
 def main():
     print("--------------------")
     print("     WELCOME TO     ")
@@ -56,7 +70,7 @@ def main():
                 case 2:
                     add_review()
                 case 3:
-                    print("Saving...")
+                    save_reviews()
                 case 4:
                     print("Exiting...")
                     running = False

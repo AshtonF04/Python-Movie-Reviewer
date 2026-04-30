@@ -1,0 +1,20 @@
+[
+    {
+        "_title": "Jurrasic Park",
+        "_release_year": 2022,
+        "_genre": "Horror",
+        "_rating": 8
+    },
+    {
+        "_title": "SpiderMan",
+        "_release_year": 2026,
+        "_genre": "9",
+        "_rating": 9
+    },
+    {
+        "_title": "Batman",
+        "_release_year": 2025,
+        "_genre": "Action",
+        "_rating": 4
+    }
+]

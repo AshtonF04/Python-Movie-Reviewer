@@ -1,12 +1,14 @@
 class Movie:
     reviews = []
 
+    @staticmethod
     def add_review(title, release_year, genre, rating):
         movie = Movie(title, release_year, genre, rating)
         Movie.reviews.append(movie)
         
         return movie
 
+    @staticmethod
     def list_reviews():
         for movie in Movie.reviews:
             print("-" * len(str(movie)))
